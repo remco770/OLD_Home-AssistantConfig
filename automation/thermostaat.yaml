@@ -1,0 +1,41 @@
+  - alias: Set Thermostat Heat Target
+    trigger:
+      platform: state
+      entity_id: input_select.thermostat_heat_target
+    action:
+      service: mqtt.publish
+      data_template:
+        topic: "actions/otmonitor/setpoint"
+        retain: true
+        payload: '{{ states.input_select.thermostat_heat_target.state }}'
+
+  - alias: Thermostat Evening program
+    trigger:
+      platform: time
+      at: "17:30:00"     
+    action:
+      service: climate.set_temperature
+      data:
+        entity_id: climate.thermostaat
+        temperature: 20
+        operation_mode: Heat
+  - alias: Thermostat Night program
+    trigger:
+      platform: time
+      at: "22:00:00"     
+    action:
+      service: climate.set_temperature
+      data:
+        entity_id: climate.thermostaat
+        temperature: 17
+        operation_mode: Heat
+  - alias: Thermostat Day program        
+    trigger:
+      platform: time
+      at: "07:00:00"     
+    action:
+      service: climate.set_temperature
+      data:
+        entity_id: climate.thermostaat
+        temperature: 18
+        operation_mode: Heat    

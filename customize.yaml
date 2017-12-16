@@ -1,0 +1,69 @@
+    sensor.fibaro_system_fgk10x_door_opening_sensor_temperatuur_voordeur:
+      friendly_name: Temperatuur voordeur
+    binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:
+      friendly_name: Voordeur
+      device_class: opening
+    sensor.fibaro_system_fgk10x_door_opening_sensor_access_control:
+      hidden: true
+    sensor.fibaro_system_fgk10x_door_opening_sensor_alarm_level:
+      hidden: true
+    sensor.fibaro_system_fgk10x_door_opening_sensor_alarm_type:
+      hidden: true
+    sensor.fibaro_system_fgk10x_door_opening_sensor_burglar:
+      hidden: true
+    sensor.fibaro_system_fgk10x_door_opening_sensor_general:
+      hidden: true
+    sensor.fibaro_system_fgk10x_door_opening_sensor_heat:
+      hidden: true
+    sensor.fibaro_system_fgk10x_door_opening_sensor_sourcenodeid:
+      hidden: true
+    sensor.fibaro_system_fgk10x_door_opening_sensor_system:
+      hidden: true
+    sensor.power_consumption:
+      friendly_name: Huidig stroomverbruik
+    sensor.power_consumption_low:
+      friendly_name: Meterstand Dal Stroom
+    sensor.power_consumption_normal:
+      friendly_name: Meterstand Stroom
+    sensor.gas_consumption:
+      friendly_name: Meterstand Gas
+    sensor.hourly_gas_consumption:
+      friendly_name: Huidig gasverbruik
+    sensor.power_production:
+      hidden: true
+    sensor.power_production_low:
+      hidden: true
+    sensor.power_production_normal:
+      hidden: true
+    sensor.power_tariff:
+      friendly_name: Huidige stroomverbruik zone
+    device_tracker.iphone_van_remco:
+      friendly_name: Remco
+      hidden: true
+    light.nachtlamp_denise:
+      assumed_state: false
+      homebridge_visible: true
+    light.kerstboom:
+      assumed_state: false
+      homebridge_visible: true
+    light.huiskamer_lamp:
+      assumed_state: false
+      homebridge_visible: true
+    light.nachtlamp_remco:
+      assumed_state: false
+      homebridge_visible: true
+    light.slaapkamer_lamp:
+      assumed_state: false
+      homebridge_visible: true
+    light.dressoir_lamp:
+      homebridge_visible: true      
+    sensor.iphone_van_remco_battery_level:
+      hidden: true
+    sensor.iphone_van_remco_battery_state:
+      hidden: true
+    sensor.iphone_battery_level:
+      hidden: true
+    sensor.iphone_battery_state:
+      hidden: true
+    climate.thermostaat:
+      homebridge_visible: true

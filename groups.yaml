@@ -1,0 +1,68 @@
+  default_view:
+    view: yes
+    entities:
+      - group.huiskamer
+      - group.slaapkamer
+      - climate.thermostaat
+      - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
+      - device_tracker.denise_denise
+      - media_player.plex_web_chrome
+
+  beveiliging:
+    view: yes
+    entities:
+      - group.sensoren
+      
+  klimaat:
+    view: yes
+    entities:
+      - group.temperaturen
+      - group.thermostaat
+      
+  licht:
+    view: yes
+    entities:
+      - group.huiskamer
+      - group.slaapkamer
+   
+  sensoren:
+    name: Sensoren
+    entities:
+      - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
+      
+  huiskamer:
+    name: Huiskamer
+    entities:
+      - light.huiskamer_lamp
+      - light.kerstboom
+      - light.dressoir_lamp
+
+  slaapkamer:
+    name: Slaapkamer
+    entities:
+      - light.nachtlamp_denise
+      - light.nachtlamp_remco
+      - light.slaapkamer_lamp
+      
+  verbruik:
+    name: Verbruik
+    entities:
+      - sensor.power_consumption_low
+      - sensor.power_consumption_normal
+      - sensor.gas_consumption
+      - sensor.hourly_gas_consumption
+      - sensor.power_consumption
+      - sensor.power_tariff
+      
+  temperaturen:
+    name: Temperatuur informatie
+    entities:
+      - sensor.temperatuur_buiten    
+      - sensor.temperatuur_huiskamer
+      - sensor.fibaro_system_fgk10x_door_opening_sensor_temperatuur_voordeur
+      
+  thermostaat:
+    name: Thermostaat
+    entities:
+      - climate.thermostaat
+      - sensor.otgw_boiler_water_temperature

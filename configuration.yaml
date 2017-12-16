@@ -6,7 +6,6 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Amsterdam
   customize: !include customize.yaml
-
       
 zone 1:
   name: Home
@@ -25,6 +24,7 @@ http:
   api_password: !secret http_password
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
+  base_url: !secret base_url
 updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
@@ -149,3 +149,6 @@ media_player:
     show_all_controls: false
     use_custom_entity_ids: true
     use_episode_art: true
+  - platform: spotify
+    client_id: !secret media_spotify_remco_client-id
+    client_secret: !secret media_spotify_remco_client-secret

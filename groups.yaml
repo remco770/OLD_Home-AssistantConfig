@@ -7,7 +7,8 @@
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
       - media_player.plex_web_chrome
-
+      - media_player.spotify
+      
   beveiliging:
     view: yes
     entities:

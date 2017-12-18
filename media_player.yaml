@@ -8,3 +8,5 @@
   - platform: spotify
     client_id: !secret media_spotify_remco_client-id
     client_secret: !secret media_spotify_remco_client-secret
+  - platform: samsungtv
+    host: 10.10.0.63

@@ -54,6 +54,9 @@
   monitoring:
     name: Monitoring
     entities:
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
-      - sensor.speedtest_ping
+      - sensor.status_sda
+      - sensor.status_sdb
+      - sensor.status_volume_1
+      - sensor.temperature_sda
+      - sensor.temperature_sdb
+      - sensor.volume_used_volume_1

@@ -13,14 +13,6 @@
         sensor_type: battery
   - platform: dsmr
     device: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AI1AM4ZC-if00-port0
-  - platform: speedtest
-    minute:
-      - 0
-      - 30
-    monitored_conditions:
-      - ping
-      - download
-      - upload    
   - platform: synologydsm
     host: 10.10.0.2
     username: !secret synology_username

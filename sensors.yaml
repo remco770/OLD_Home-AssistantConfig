@@ -21,3 +21,12 @@
       - ping
       - download
       - upload    
+  - platform: synologydsm
+    host: 10.10.0.2
+    username: !secret synology_username
+    password: !secret synology_password
+    monitored_conditions:
+      - disk_status
+      - disk_temp
+      - volume_status
+      - volume_percentage_used

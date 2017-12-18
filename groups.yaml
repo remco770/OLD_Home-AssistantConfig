@@ -7,9 +7,9 @@
       - group.beveiliging
       - group.temperaturen
       - group.mediaplayers
+      - group.monitoring
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
-
 
   beveiliging:
     name: Beveiliging
@@ -49,3 +49,10 @@
     entities:
       - media_player.plex_8espcyudnu4d2h9usuo8hftj
       - media_player.spotify
+      
+  monitoring:
+    name: Monitoring
+    entities:
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.speedtest_ping

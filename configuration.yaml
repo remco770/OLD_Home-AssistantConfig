@@ -20,8 +20,6 @@ frontend:
 # Enables configuration UI
 config:
 
-updater:
-
 map:
 
 http:

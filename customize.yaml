@@ -3,22 +3,6 @@
     binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:
       friendly_name: Voordeur
       device_class: opening
-    sensor.fibaro_system_fgk10x_door_opening_sensor_access_control:
-      hidden: true
-    sensor.fibaro_system_fgk10x_door_opening_sensor_alarm_level:
-      hidden: true
-    sensor.fibaro_system_fgk10x_door_opening_sensor_alarm_type:
-      hidden: true
-    sensor.fibaro_system_fgk10x_door_opening_sensor_burglar:
-      hidden: true
-    sensor.fibaro_system_fgk10x_door_opening_sensor_general:
-      hidden: true
-    sensor.fibaro_system_fgk10x_door_opening_sensor_heat:
-      hidden: true
-    sensor.fibaro_system_fgk10x_door_opening_sensor_sourcenodeid:
-      hidden: true
-    sensor.fibaro_system_fgk10x_door_opening_sensor_system:
-      hidden: true
     sensor.power_consumption:
       friendly_name: Huidig stroomverbruik
     sensor.power_consumption_low:
@@ -29,12 +13,6 @@
       friendly_name: Meterstand Gas
     sensor.hourly_gas_consumption:
       friendly_name: Huidig gasverbruik
-    sensor.power_production:
-      hidden: true
-    sensor.power_production_low:
-      hidden: true
-    sensor.power_production_normal:
-      hidden: true
     sensor.power_tariff:
       friendly_name: Huidige stroomverbruik zone
     device_tracker.iphone_van_remco:

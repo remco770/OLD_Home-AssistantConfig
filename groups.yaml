@@ -3,29 +3,38 @@
     entities:
       - group.huiskamer
       - group.slaapkamer
-      - climate.thermostaat
+      - group.informatie
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
-      - media_player.plex_web_chrome
-      - media_player.spotify
-      
+
+
   beveiliging:
     view: yes
     entities:
       - group.sensoren
-      
+
+  media:
+    view: yes
+    entities:
+      - group.mediaplayers
+  
   klimaat:
     view: yes
     entities:
       - group.temperaturen
-      - group.thermostaat
-      
+
   licht:
     view: yes
     entities:
       - group.huiskamer
       - group.slaapkamer
-   
+  
+  informatie:
+    name: Informatie
+    entities:
+      - sensor.power_consumption
+      - sensor.hourly_gas_consumption
+  
   sensoren:
     name: Sensoren
     entities:
@@ -62,8 +71,8 @@
       - sensor.temperatuur_huiskamer
       - sensor.fibaro_system_fgk10x_door_opening_sensor_temperatuur_voordeur
       
-  thermostaat:
-    name: Thermostaat
+  mediaplayers:
+    name: Media Players
     entities:
-      - climate.thermostaat
-      - sensor.otgw_boiler_water_temperature
+      - media_player.plex_8espcyudnu4d2h9usuo8hftj
+      - media_player.spotify

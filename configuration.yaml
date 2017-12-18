@@ -61,10 +61,6 @@ sensor:
         sensor_type: battery
   - platform: dsmr
     device: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AI1AM4ZC-if00-port0
-  - platform: mqtt
-    state_topic: "events/central_heating/otmonitor/boilerwatertemperature"
-    name: "OTGW Boiler Water Temperature"
-    unit_of_measurement: '°C'
     
 light:
   - platform: rflink
@@ -122,25 +118,6 @@ influxdb:
   username: home-assistant
   password: !secret influxdb_password
   
-climate:
-  - platform: mqtt
-    name: Thermostaat
-    current_temperature_topic: events/central_heating/otmonitor/roomtemperature
-    temperature_command_topic: actions/otmonitor/setpoint
-    modes:
-     - off
-     - heat
-     - auto
-    min_temp: 15
-    max_temp: 21
-    target_temp: 17
-    cold_tolerance: 0.3
-    hot_tolerance: 0
-    min_cycle_duration:
-      seconds: 5
-    keep_alive:
-      minutes: 3
-      
 media_player:
   - platform: plex
     entity_namespace: 'plex'

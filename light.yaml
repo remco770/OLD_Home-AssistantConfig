@@ -1,0 +1,28 @@
+  - platform: rflink
+    automatic_add: false
+    device_defaults:
+      fire_event: true
+      signal_repetitions: 2
+    devices:
+      newkaku_0000DD57_2:
+        name: Kerstboom
+        type: switchable
+      newkaku_0000D423_2:
+        name: Huiskamer Lamp
+        type: dimmable
+      newkaku_009C1ED2_2:
+        name: Slaapkamer Lamp
+        type: switchable
+      newkaku_000075DE_2:
+        name: Nachtlamp Denise
+        type: switchable
+      newkaku_00B532BA_2:
+        name: Nachtlamp Remco
+        type: switchable
+  - platform: limitlessled
+    bridges:
+    - host: 10.10.0.67
+      groups:
+      - number: 1
+        type: rgbww
+        name: Dressoir Lamp

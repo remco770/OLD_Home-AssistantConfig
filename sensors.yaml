@@ -1,0 +1,16 @@
+  - platform: yr
+  - platform: rflink
+    automatic_add: false
+    devices:
+      cresta_6703_temp:
+        name: Temperatuur Buiten
+        sensor_type: temperature 
+      cresta_6703_hum:
+        name: Luchtvochtigheid Huiskamer
+        sensor_type: humidity 
+      cresta_6703_bat:
+        name: Batterij Huiskamer Thermometer
+        sensor_type: battery
+  - platform: dsmr
+    device: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AI1AM4ZC-if00-port0
+    

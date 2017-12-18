@@ -3,43 +3,19 @@
     entities:
       - group.huiskamer
       - group.slaapkamer
-      - group.informatie
+      - group.verbruik
+      - group.beveiliging
+      - group.temperaturen
+      - group.mediaplayers
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
 
 
   beveiliging:
-    view: yes
-    entities:
-      - group.sensoren
-
-  media:
-    view: yes
-    entities:
-      - group.mediaplayers
-  
-  klimaat:
-    view: yes
-    entities:
-      - group.temperaturen
-
-  licht:
-    view: yes
-    entities:
-      - group.huiskamer
-      - group.slaapkamer
-  
-  informatie:
-    name: Informatie
-    entities:
-      - sensor.power_consumption
-      - sensor.hourly_gas_consumption
-  
-  sensoren:
-    name: Sensoren
+    name: Beveiliging
     entities:
       - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
-      
+
   huiskamer:
     name: Huiskamer
     entities:
@@ -57,9 +33,6 @@
   verbruik:
     name: Verbruik
     entities:
-      - sensor.power_consumption_low
-      - sensor.power_consumption_normal
-      - sensor.gas_consumption
       - sensor.hourly_gas_consumption
       - sensor.power_consumption
       - sensor.power_tariff

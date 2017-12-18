@@ -20,6 +20,8 @@ frontend:
 # Enables configuration UI
 config:
 
+map:
+
 http:
   api_password: !secret http_password
   ssl_certificate: !secret ssl_certificate
@@ -41,63 +43,9 @@ history:
 # View all events in a logbook
 logbook:
 
-# Track the sun
-sun:
-
-# Weather prediction
-sensor:
-  - platform: yr
-  - platform: rflink
-    automatic_add: false
-    devices:
-      cresta_6703_temp:
-        name: Temperatuur Buiten
-        sensor_type: temperature 
-      cresta_6703_hum:
-        name: Luchtvochtigheid Huiskamer
-        sensor_type: humidity 
-      cresta_6703_bat:
-        name: Batterij Huiskamer Thermometer
-        sensor_type: battery
-  - platform: dsmr
-    device: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AI1AM4ZC-if00-port0
-    
-light:
-  - platform: rflink
-    automatic_add: false
-    device_defaults:
-      fire_event: true
-      signal_repetitions: 2
-    devices:
-      newkaku_0000DD57_2:
-        name: Kerstboom
-        type: switchable
-      newkaku_0000D423_2:
-        name: Huiskamer Lamp
-        type: dimmable
-      newkaku_009C1ED2_2:
-        name: Slaapkamer Lamp
-        type: switchable
-      newkaku_000075DE_2:
-        name: Nachtlamp Denise
-        type: switchable
-      newkaku_00B532BA_2:
-        name: Nachtlamp Remco
-        type: switchable
-  - platform: limitlessled
-    bridges:
-    - host: 10.10.0.67
-      groups:
-      - number: 1
-        type: rgbww
-        name: Dressoir Lamp
-
 # Text to speech
 tts:
   - platform: google
-
-group: !include groups.yaml
-automation: !include_dir_merge_list automation
 
 rflink:
   port: /dev/serial/by-id/usb-Arduino__www.arduino.cc__0042_55632313838351813140-if00
@@ -117,15 +65,11 @@ influxdb:
   host: 127.0.0.1
   username: home-assistant
   password: !secret influxdb_password
-  
-media_player:
-  - platform: plex
-    entity_namespace: 'plex'
-    include_non_clients: true
-    scan_interval: 5
-    show_all_controls: false
-    use_custom_entity_ids: true
-    use_episode_art: true
-  - platform: spotify
-    client_id: !secret media_spotify_remco_client-id
-    client_secret: !secret media_spotify_remco_client-secret
+
+# Includes  
+media_player: !include media_player
+light: !include light.yaml
+sensor: !include sensors.yaml
+group: !include groups.yaml
+automation: !include_dir_merge_list automation
+

@@ -10,3 +10,4 @@
     client_secret: !secret media_spotify_remco_client-secret
   - platform: samsungtv
     host: 10.10.0.63
+    mac: 0c:89:10:be:84:0a

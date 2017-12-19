@@ -1,0 +1,27 @@
+  - alias: 'Set Thermostat Heat Target'
+    trigger:
+      - platform: state
+        entity_id: input_number.thermostat_heat_target
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "actions/otmonitor/setpoint"
+          retain: true
+          payload: '0'
+      - delay: '00:01:30'
+      - service: mqtt.publish
+        data_template:
+          topic: "actions/otmonitor/setpoint"
+          retain: true
+          payload: '{{ states.input_number.thermostat_heat_target.state }}'
+
+
+  - alias: Set Thermostat Heat Target Slider
+    trigger:
+      - platform: mqtt
+        topic: "actions/otmonitor/setpoint"
+    action:
+      - service: input_number.set_value
+        data_template:
+          entity_id: input_number.thermostat_heat_target
+          value: '{{ trigger.payload }}'          

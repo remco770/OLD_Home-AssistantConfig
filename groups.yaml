@@ -10,6 +10,8 @@
       - group.monitoring
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
+      - configurator.plex_media_server
+
 
   beveiliging:
     name: Beveiliging
@@ -43,11 +45,13 @@
       - sensor.temperatuur_buiten    
       - sensor.temperatuur_huiskamer
       - sensor.fibaro_system_fgk10x_door_opening_sensor_temperatuur_voordeur
+      - sensor.otgw_roomtemperature
+      - input_number.thermostat_heat_target
+      - sensor.otgw_setpoint
       
   mediaplayers:
     name: Media Players
     entities:
-      - media_player.plex_8espcyudnu4d2h9usuo8hftj
       - media_player.spotify
       - media_player.samsung_tv_remote
       - media_player.slaapkamer

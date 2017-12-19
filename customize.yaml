@@ -15,9 +15,6 @@
       friendly_name: Huidig gasverbruik
     sensor.power_tariff:
       friendly_name: Huidige stroomverbruik zone
-    device_tracker.iphone_van_remco:
-      friendly_name: Remco
-      hidden: true
     light.nachtlamp_denise:
       assumed_state: false
       homebridge_visible: true
@@ -51,3 +48,9 @@
       entity_picture: ''
     media_player.huiskamer:
       friendly_name: Chromecast Slaapkamer
+    input_number.thermostat_heat_target:
+      friendly_name: Temperatuur Thermostaat
+    sensor.otgw_roomtemperature:
+      friendly_name: Temperatuur huiskamer
+    sensor.otgw_setpoint:
+      friendly_name: Gewenste temperatuur huiskamer

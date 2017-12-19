@@ -65,6 +65,13 @@ influxdb:
   host: 127.0.0.1
   username: home-assistant
   password: !secret influxdb_password
+  
+input_number:
+  thermostat_heat_target:
+    name: Set Heat Target
+    min: 10
+    max: 30
+    step: 0.5
 
 # Includes  
 media_player: !include media_player.yaml
@@ -72,4 +79,5 @@ light: !include light.yaml
 sensor: !include sensors.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
+
 

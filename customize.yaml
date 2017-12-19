@@ -48,4 +48,6 @@
     media_player.spotify:
       entity_picture: ''
     media_player.plex_8espcyudnu4d2h9usuo8hftj:
-      entity_picture: ''      
+      entity_picture: ''
+    media_player.huiskamer:
+      friendly_name: Chromecast Slaapkamer

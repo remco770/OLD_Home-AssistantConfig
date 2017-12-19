@@ -11,3 +11,5 @@
   - platform: samsungtv
     host: 10.10.0.63
     mac: 0c:89:10:be:84:0a
+  - platform: cast
+    host: 10.10.0.69

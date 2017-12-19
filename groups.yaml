@@ -50,6 +50,7 @@
       - media_player.plex_8espcyudnu4d2h9usuo8hftj
       - media_player.spotify
       - media_player.samsung_tv_remote
+      - media_player.slaapkamer
       
   monitoring:
     name: Monitoring

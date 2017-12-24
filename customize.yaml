@@ -54,3 +54,9 @@
       friendly_name: Temperatuur huiskamer
     sensor.otgw_setpoint:
       friendly_name: Gewenste temperatuur huiskamer
+    sensor.ssl_certificate_expiry:
+      friendly_name: Certificaat Domotica
+    sensor.ssl_certificate_expiry_2:
+      friendly_name: Certificaat Stats
+    sensor.log_db_file_size:
+      friendly_name: Database HomeAssistant

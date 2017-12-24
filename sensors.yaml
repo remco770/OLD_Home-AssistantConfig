@@ -30,3 +30,19 @@
     state_topic: "events/central_heating/otmonitor/setpoint"
     name: "OTGW setpoint"
     unit_of_measurement: '°C'
+  - platform: systemmonitor
+    resources:
+      - type: disk_free
+        arg: /
+      - type: memory_free
+      - type: processor_use
+      - type: last_boot
+  - platform: cert_expiry
+    host: !secret cert_domotica
+  - platform: cert_expiry
+    host: !secret cert_stats
+  - platform: command_line
+    name: log_db_file_size
+    command: "du -m /home/homeassistant/.homeassistant/home-assistant_v2.db | cut -f1"
+    unit_of_measurement: 'MB'
+    value_template: '{{ value | int - 1 }}'

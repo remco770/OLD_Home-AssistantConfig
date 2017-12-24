@@ -1,5 +1,6 @@
   default_view:
     view: yes
+    icon: mdi:home
     entities:
       - group.huiskamer
       - group.slaapkamer
@@ -11,7 +12,14 @@
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
       - configurator.plex_media_server
-
+      
+  view_hardware:
+    view: yes
+    name: Monitoring
+    icon: mdi:memory
+    entities:
+      - group.group_synology_monitoring
+      - group.group_domotica_monitoring
 
   beveiliging:
     name: Beveiliging
@@ -56,8 +64,8 @@
       - media_player.samsung_tv_remote
       - media_player.slaapkamer
       
-  monitoring:
-    name: Monitoring
+  group_synology_monitoring:
+    name: Synology Monitoring
     entities:
       - sensor.status_sda
       - sensor.status_sdb
@@ -65,3 +73,14 @@
       - sensor.temperature_sda
       - sensor.temperature_sdb
       - sensor.volume_used_volume_1
+ 
+  group_domotica_monitoring:
+    name: Domotica Monitoring
+    entities:
+      - sensor.disk_free_
+      - sensor.ram_available
+      - sensor.cpu_used
+      - sensor.last_boot
+      - sensor.log_db_file_size
+      - sensor.ssl_certificate_expiry
+      - sensor.ssl_certificate_expiry_2

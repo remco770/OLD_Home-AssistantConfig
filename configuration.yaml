@@ -80,5 +80,6 @@ light: !include light.yaml
 sensor: !include sensors.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
+recorder: !include recorder.yaml
 
 

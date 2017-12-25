@@ -1,0 +1,11 @@
+  purge_interval: 2
+  purge_keep_days: 5
+  db_url: !secret db_url
+  exclude:
+    domains:
+      - automation
+      - updater
+      - group
+    entities:
+      - sensor.hourly_gas_consumption
+      - sensor.otgw_roomtemperature

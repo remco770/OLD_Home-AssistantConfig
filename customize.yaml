@@ -60,3 +60,5 @@
       friendly_name: Certificaat Stats
     sensor.log_db_file_size:
       friendly_name: Database HomeAssistant
+    script.1514286368478:
+      friendly_name: Reset programma

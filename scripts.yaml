@@ -1,0 +1,37 @@
+'1514286368478':
+  alias: thermostat_reset
+  sequence:
+  - data:
+      payload: '0'
+      retain: 'true'
+      topic: actions/otmonitor/setpoint
+    service: mqtt.publish
+  - delay: 00:12:00
+'1514320928971':
+  alias: Comfort programma
+  sequence:
+  - data:
+      payload: '0'
+      retain: 'true'
+      topic: actions/otmonitor/setpoint
+    service: mqtt.publish
+  - delay: 00:12:00
+  - data:
+      payload: '20.5'
+      retain: 'true'
+      topic: actions/otmonitor/setpoint
+    service: mqtt.publish
+'1514321122059':
+  alias: Niet thuis programma
+  sequence:
+  - data:
+      payload: '0'
+      retain: 'true'
+      topic: actions/otmonitor/setpoint
+    service: mqtt.publish
+  - delay: 00:12:00
+  - data:
+      payload: '17.0'
+      retain: 'true'
+      topic: actions/otmonitor/setpoint
+    service: mqtt.publish

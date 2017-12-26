@@ -12,6 +12,7 @@
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
       - configurator.plex_media_server
+      - group.group_thermostaat
       
   view_hardware:
     view: yes
@@ -55,7 +56,17 @@
       - sensor.fibaro_system_fgk10x_door_opening_sensor_temperatuur_voordeur
       - sensor.otgw_roomtemperature
       - input_number.thermostat_heat_target
+
+
+  
+  group_thermostaat:
+    name: Thermostaat
+    entities:
+      - sensor.otgw_roomtemperature    
       - sensor.otgw_setpoint
+      - script.1514286368478
+      - script.1514321122059
+      - script.1514320928971
       
   mediaplayers:
     name: Media Players

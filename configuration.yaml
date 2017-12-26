@@ -70,9 +70,11 @@ influxdb:
 input_number:
   thermostat_heat_target:
     name: Set Heat Target
-    min: 0
+    min: 10
     max: 30
     step: 0.5
+   
+   
 
 # Includes  
 media_player: !include media_player.yaml
@@ -80,6 +82,7 @@ light: !include light.yaml
 sensor: !include sensors.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
+script: !include scripts.yaml
 recorder: !include recorder.yaml
 
 

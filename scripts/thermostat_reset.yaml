@@ -1,8 +1,0 @@
-  thermostat_reset:
-    sequence:
-      - service: mqtt.publish
-        data_template:
-          topic: 'actions/otmonitor/setpoint'
-          retain: true
-          payload: '0'
-

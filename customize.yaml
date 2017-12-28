@@ -1,20 +1,27 @@
+## Sensors
+
     sensor.fibaro_system_fgk10x_door_opening_sensor_temperatuur_voordeur:
       friendly_name: Temperatuur voordeur
     binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:
       friendly_name: Voordeur
       device_class: opening
-    sensor.power_consumption:
-      friendly_name: Huidig stroomverbruik
-    sensor.power_consumption_low:
-      friendly_name: Meterstand Dal Stroom
-    sensor.power_consumption_normal:
-      friendly_name: Meterstand Stroom
-    sensor.gas_consumption:
-      friendly_name: Meterstand Gas
     sensor.hourly_gas_consumption:
       friendly_name: Huidig gasverbruik
     sensor.power_tariff:
       friendly_name: Huidige stroomverbruik zone
+    sensor.otgw_roomtemperature:
+      friendly_name: Temperatuur huiskamer
+    sensor.otgw_setpoint:
+      friendly_name: Gewenste temperatuur huiskamer
+    sensor.ssl_certificate_expiry:
+      friendly_name: Certificaat Domotica
+    sensor.ssl_certificate_expiry_2:
+      friendly_name: Certificaat Stats
+    sensor.log_db_file_size:
+      friendly_name: Database HomeAssistant
+
+## Light
+
     light.nachtlamp_denise:
       assumed_state: false
       homebridge_visible: true
@@ -32,33 +39,12 @@
       homebridge_visible: true
     light.dressoir_lamp:
       homebridge_visible: true      
-    sensor.iphone_van_remco_battery_level:
-      hidden: true
-    sensor.iphone_van_remco_battery_state:
-      hidden: true
-    sensor.iphone_battery_level:
-      hidden: true
-    sensor.iphone_battery_state:
-      hidden: true
-    climate.thermostaat:
-      homebridge_visible: true
+
+## Media players
+
     media_player.spotify:
       entity_picture: ''
     media_player.plex_8espcyudnu4d2h9usuo8hftj:
       entity_picture: ''
     media_player.huiskamer:
       friendly_name: Chromecast Slaapkamer
-    input_number.thermostat_heat_target:
-      friendly_name: Temperatuur Thermostaat
-    sensor.otgw_roomtemperature:
-      friendly_name: Temperatuur huiskamer
-    sensor.otgw_setpoint:
-      friendly_name: Gewenste temperatuur huiskamer
-    sensor.ssl_certificate_expiry:
-      friendly_name: Certificaat Domotica
-    sensor.ssl_certificate_expiry_2:
-      friendly_name: Certificaat Stats
-    sensor.log_db_file_size:
-      friendly_name: Database HomeAssistant
-    script.1514286368478:
-      friendly_name: Reset programma

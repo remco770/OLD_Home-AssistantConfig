@@ -18,6 +18,7 @@
     name: Energie
     entities:
       - group.verbruik
+      - group.group_energiemeter
 
   view_klimaat:
     view: yes
@@ -58,8 +59,16 @@
     name: Verbruik
     entities:
       - sensor.hourly_gas_consumption
-      - sensor.power_consumption
-      - sensor.power_tariff
+      - sensor.energie_stroom_verbruik
+
+  group_energiemeter:
+    name: Energiemeter
+    entities:
+      - sensor.power_consumption_low
+      - sensor.power_consumption_normal
+      - sensor.gas_consumption
+      - sensor.power_tariff    
+  
       
   temperaturen:
     name: Temperatuur informatie

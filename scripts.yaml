@@ -35,3 +35,17 @@
       retain: 'true'
       topic: actions/otmonitor/setpoint
     service: mqtt.publish
+'1514322454521':
+  alias: Thuis programma
+  sequence:
+  - data:
+      payload: '0'
+      retain: 'true'
+      topic: actions/otmonitor/setpoint
+    service: mqtt.publish
+  - delay: 00:12:00
+  - data:
+      payload: '19.5'
+      retain: 'true'
+      topic: actions/otmonitor/setpoint
+    service: mqtt.publish

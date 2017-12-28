@@ -6,12 +6,25 @@
       - group.slaapkamer
       - group.verbruik
       - group.beveiliging
-      - group.temperaturen
       - group.mediaplayers
       - group.monitoring
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
       - configurator.plex_media_server
+
+  view_energie:
+    view: yes
+    icon: mdi:power-plug
+    name: Energie
+    entities:
+      - group.verbruik
+
+  view_klimaat:
+    view: yes
+    icon: mdi:thermometer
+    name: Klimaat
+    entities:
+      - group.temperaturen
       - group.group_thermostaat
       
   view_hardware:
@@ -55,17 +68,14 @@
       - sensor.temperatuur_huiskamer
       - sensor.fibaro_system_fgk10x_door_opening_sensor_temperatuur_voordeur
       - sensor.otgw_roomtemperature
-      - input_number.thermostat_heat_target
-
-
   
   group_thermostaat:
     name: Thermostaat
     entities:
-      - sensor.otgw_roomtemperature    
       - sensor.otgw_setpoint
       - script.1514286368478
       - script.1514321122059
+      - script.1514322454521
       - script.1514320928971
       
   mediaplayers:

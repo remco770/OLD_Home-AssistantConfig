@@ -77,6 +77,7 @@ input_number:
    
 
 # Includes  
+climate: !include climate.yaml
 media_player: !include media_player.yaml
 light: !include light.yaml
 sensor: !include sensors.yaml

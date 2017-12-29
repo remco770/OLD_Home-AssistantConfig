@@ -4,7 +4,6 @@
     entities:
       - group.huiskamer
       - group.slaapkamer
-      - group.verbruik
       - group.beveiliging
       - group.mediaplayers
       - group.monitoring
@@ -68,7 +67,6 @@
       - sensor.power_consumption_normal
       - sensor.gas_consumption
       - sensor.power_tariff    
-  
       
   temperaturen:
     name: Temperatuur informatie
@@ -82,6 +80,7 @@
     name: Thermostaat
     entities:
       - sensor.otgw_setpoint
+      - climate.huiskamer
       - script.1514286368478
       - script.1514321122059
       - script.1514322454521

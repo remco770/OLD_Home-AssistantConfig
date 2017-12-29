@@ -52,3 +52,5 @@
         friendly_name: Huidig stroomverbruik
         value_template: '{{ states.sensor.power_consumption.state | float * 1000 }}'
         unit_of_measurement: 'Watt'
+      thermostaat_temperatuur:
+        value_template: '{{ states.climate.huiskamer.attributes.temperature }}'

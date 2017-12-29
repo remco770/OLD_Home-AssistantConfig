@@ -46,5 +46,10 @@
       entity_picture: ''
     media_player.plex_8espcyudnu4d2h9usuo8hftj:
       entity_picture: ''
-    media_player.huiskamer:
+    media_player.slaapkamer:
       friendly_name: Chromecast Slaapkamer
+      
+## Climate
+
+    climate.thermostaat:
+      homebridge_visible: true

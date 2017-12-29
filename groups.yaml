@@ -80,11 +80,7 @@
     name: Thermostaat
     entities:
       - sensor.otgw_setpoint
-      - climate.huiskamer
-      - script.1514286368478
-      - script.1514321122059
-      - script.1514322454521
-      - script.1514320928971
+      - climate.thermostaat
       
   mediaplayers:
     name: Media Players

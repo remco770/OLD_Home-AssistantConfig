@@ -1,5 +1,4 @@
   - platform: mqtt
     name: Thermostaat
-    initial_operation_mode: "auto"
     current_temperature_topic: events/central_heating/otmonitor/roomtemperature
     temperature_command_topic: /

@@ -53,4 +53,4 @@
         value_template: '{{ states.sensor.power_consumption.state | float * 1000 }}'
         unit_of_measurement: 'Watt'
       thermostaat_temperatuur:
-        value_template: '{{ states.climate.huiskamer.attributes.temperature }}'
+        value_template: '{{ states.climate.thermostaat.attributes.temperature }}'

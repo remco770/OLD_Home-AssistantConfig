@@ -24,7 +24,7 @@
         data_template:
           topic: "actions/otmonitor/setpoint"
           retain: true
-          payload: '{{ states.climate.huiskamer.attributes.temperature }}'
+          payload: '{{ states.climate.thermostaat.attributes.temperature }}'
 
   - alias: 'Set daily heat target'
     trigger:

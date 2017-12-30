@@ -53,4 +53,4 @@
 
     climate.thermostaat:
       homebridge_visible: true
-      target_temp_step: 0,5
+      target_temp_step: 0.5

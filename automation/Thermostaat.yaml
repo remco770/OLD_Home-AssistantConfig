@@ -1,3 +1,14 @@
+  - alias: 'Set Thermostat at boot'
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - delay: '00:01:00'
+      - service: climate.set_operation_mode
+        data:
+          entity_id: climate.thermostaat
+          operation_mode: Heat
+
   - alias: 'Set Thermostat Heat Target'
     trigger:
       - platform: state
@@ -15,4 +26,14 @@
           retain: true
           payload: '{{ states.climate.huiskamer.attributes.temperature }}'
 
+  - alias: 'Set daily heat target'
+    trigger:
+      - platform: time
+        at: '05:00:00'
+    action:
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.thermostaat
+          temperature: 17
+          operation_mode: Heat
 

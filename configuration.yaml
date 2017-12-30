@@ -66,15 +66,6 @@ influxdb:
   host: 127.0.0.1
   username: home-assistant
   password: !secret influxdb_password
-  
-input_number:
-  thermostat_heat_target:
-    name: Set Heat Target
-    min: 10
-    max: 30
-    step: 0.5
-   
-   
 
 # Includes  
 climate: !include climate.yaml

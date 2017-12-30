@@ -2,3 +2,4 @@
     name: Thermostaat
     current_temperature_topic: events/central_heating/otmonitor/roomtemperature
     temperature_command_topic: /
+    operation_list: heat

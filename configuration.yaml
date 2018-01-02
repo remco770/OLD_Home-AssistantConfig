@@ -67,14 +67,6 @@ influxdb:
   username: home-assistant
   password: !secret influxdb_password
 
-history_graph:
-  gr1:
-    entities:
-      - sensor.thermostaat_temperatuur
-      - sensor.otgw_setpoint
-      - sensor.otgw_roomtemperature
-    hours_to_show: 240
-  
 # Includes  
 climate: !include climate.yaml
 media_player: !include media_player.yaml
@@ -84,5 +76,5 @@ group: !include groups.yaml
 automation: !include_dir_merge_list automation
 script: !include scripts.yaml
 recorder: !include recorder.yaml
-
+history_graph: !include history_graph.yaml
 

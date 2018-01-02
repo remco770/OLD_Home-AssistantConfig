@@ -1,0 +1,6 @@
+  gr1:
+    entities:
+      - sensor.thermostaat_temperatuur
+      - sensor.otgw_setpoint
+      - sensor.otgw_roomtemperature
+    hours_to_show: 24

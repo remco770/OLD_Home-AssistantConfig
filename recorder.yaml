@@ -9,3 +9,4 @@
       - sensor.hourly_gas_consumption
       - sensor.energie_stroom_verbruik
       - climate.thermostaat
+      - sensor.thermostaat_temperatuur

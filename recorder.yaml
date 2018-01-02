@@ -8,3 +8,4 @@
       - sensor.otgw_roomtemperature
       - sensor.hourly_gas_consumption
       - sensor.energie_stroom_verbruik
+      - climate.thermostaat

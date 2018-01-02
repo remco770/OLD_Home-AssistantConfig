@@ -10,6 +10,7 @@
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
       - configurator.plex_media_server
+      - history_graph.gr1
 
   view_energie:
     view: yes

@@ -25,11 +25,11 @@
   - platform: mqtt
     state_topic: "events/central_heating/otmonitor/roomtemperature"
     name: "OTGW roomtemperature"
-    unit_of_measurement: '°C'
+    unit_of_measurement: "°C"
   - platform: mqtt
     state_topic: "events/central_heating/otmonitor/setpoint"
     name: "OTGW setpoint"
-    unit_of_measurement: '°C'
+    unit_of_measurement: "°C"
   - platform: systemmonitor
     resources:
       - type: disk_free
@@ -54,3 +54,4 @@
         unit_of_measurement: 'Watt'
       thermostaat_temperatuur:
         value_template: '{{ states.climate.thermostaat.attributes.temperature }}'
+        unit_of_measurement: "°C"

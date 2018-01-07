@@ -77,4 +77,5 @@ automation: !include_dir_merge_list automation
 script: !include scripts.yaml
 recorder: !include recorder.yaml
 history_graph: !include history_graph.yaml
+switch: !include switch.yaml
 

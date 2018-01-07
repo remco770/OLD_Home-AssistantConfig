@@ -1,0 +1,4 @@
+
+  - platform: rpi_gpio
+    ports:
+      23: Alarm Inbraak

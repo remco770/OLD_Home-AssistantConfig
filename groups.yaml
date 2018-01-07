@@ -10,7 +10,7 @@
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
       - configurator.plex_media_server
-      - history_graph.gr1
+
 
   view_energie:
     view: yes
@@ -20,6 +20,13 @@
       - group.verbruik
       - group.group_energiemeter
 
+  view_beveiliging:
+    view: yes
+    icon: mdi:alarm-light
+    name: Beveiliging
+    entities:
+      - group.group_beveiliging_control
+      
   view_klimaat:
     view: yes
     icon: mdi:thermometer
@@ -110,3 +117,8 @@
       - sensor.log_db_file_size
       - sensor.ssl_certificate_expiry
       - sensor.ssl_certificate_expiry_2
+  
+  group_beveiliging_control:
+    name: Control Center
+    entities:
+      - switch.alarm_inbraak

@@ -55,3 +55,8 @@
       thermostaat_temperatuur:
         value_template: '{{ states.climate.thermostaat.attributes.temperature }}'
         unit_of_measurement: "°C"
+  - platform: google_travel_time
+    api_key: !secret google_travel_time_api_key
+    origin: device_tracker.denise_denise
+    destination: zone.home
+    name: Travel Time Denise to Home

@@ -10,3 +10,5 @@
       - sensor.energie_stroom_verbruik
       - climate.thermostaat
       - sensor.thermostaat_temperatuur
+      - sensor.temperatuur_buiten
+      - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor

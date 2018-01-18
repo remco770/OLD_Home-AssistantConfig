@@ -1,4 +1,5 @@
-
-  - platform: rpi_gpio
-    ports:
-      23: Alarm Inbraak
+  platform: command_line
+  switches:
+    alarm_inbraak:
+      command_on: "python /home/homeassistant/.homeassistant/python_scripts/alarm_inbraak.py"
+      friendly_name: "Alarm Inbraak"

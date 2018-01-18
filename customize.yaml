@@ -22,16 +22,9 @@
 
 ## Light
 
-    light.nachtlamp_denise:
-      assumed_state: false
-      homebridge_visible: true
-    light.kerstboom:
-      assumed_state: false
+    light.nachtlampen:
       homebridge_visible: true
     light.huiskamer_lamp:
-      assumed_state: false
-      homebridge_visible: true
-    light.nachtlamp_remco:
       assumed_state: false
       homebridge_visible: true
     light.slaapkamer_lamp:
@@ -54,3 +47,8 @@
     climate.thermostaat:
       homebridge_visible: true
       target_temp_step: 0.5
+
+## Switches
+
+    switch.alarm_inbraak:
+      assumed_state: false

@@ -49,3 +49,8 @@
       retain: 'true'
       topic: actions/otmonitor/setpoint
     service: mqtt.publish
+'1515336270616':
+  alias: Alarm Inbraak
+  sequence:
+  - data: {}
+    service: python_script.alarm_inbraak

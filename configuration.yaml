@@ -6,13 +6,6 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Amsterdam
   customize: !include customize.yaml
-      
-zone 1:
-  name: Home
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-  radius: 200
-  icon: mdi:account-multiple
 
 # Enables the frontend
 frontend:
@@ -78,4 +71,6 @@ script: !include scripts.yaml
 recorder: !include recorder.yaml
 history_graph: !include history_graph.yaml
 switch: !include switch.yaml
+zone: !include zone.yaml
+
 

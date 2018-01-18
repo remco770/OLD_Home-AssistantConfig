@@ -11,7 +11,6 @@
       - device_tracker.denise_denise
       - configurator.plex_media_server
 
-
   view_energie:
     view: yes
     icon: mdi:power-plug
@@ -52,14 +51,12 @@
     name: Huiskamer
     entities:
       - light.huiskamer_lamp
-      - light.kerstboom
       - light.dressoir_lamp
 
   slaapkamer:
     name: Slaapkamer
     entities:
-      - light.nachtlamp_denise
-      - light.nachtlamp_remco
+      - light.nachtlampen
       - light.slaapkamer_lamp
       
   verbruik:

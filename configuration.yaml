@@ -47,8 +47,6 @@ rflink:
 zwave:
   usb_path: /dev/ttyACM1
 
-ios:
-
 mqtt:
   broker: 127.0.0.1
 
@@ -62,6 +60,7 @@ influxdb:
 
 # Includes  
 climate: !include climate.yaml
+ios: !include ios.yaml
 media_player: !include media_player.yaml
 light: !include light.yaml
 sensor: !include sensors.yaml

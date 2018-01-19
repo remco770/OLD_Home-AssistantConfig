@@ -37,3 +37,15 @@
           temperature: 17
           operation_mode: Heat
 
+  - alias: 'Set Thermostat Heat Target using push'
+    trigger:
+      - platform: event
+        event_type: ios.notification_action_fired
+        event_data:
+          actionName: HEATERON
+    action:
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.thermostaat
+          temperature: 20.5
+          operation_mode: Heat

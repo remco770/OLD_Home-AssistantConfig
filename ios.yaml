@@ -1,0 +1,11 @@
+ push: 
+  categories: 
+  - name: Heater
+    identifier: heater
+    actions: 
+    - identifier: HEATERON
+      title: "Zet de verwarming aan" 
+      activationMode: 'background' 
+      authenticationRequired: no 
+      destructive: yes 
+      behavior: 'default'

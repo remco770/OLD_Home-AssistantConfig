@@ -29,12 +29,12 @@
   - alias: 'Set daily heat target'
     trigger:
       - platform: time
-        at: '05:00:00'
+        at: '04:30:00'
     action:
       - service: climate.set_temperature
         data:
           entity_id: climate.thermostaat
-          temperature: 17
+          temperature: 0
           operation_mode: Heat
 
   - alias: 'Set Sunday morning heat target'

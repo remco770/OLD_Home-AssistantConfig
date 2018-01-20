@@ -51,31 +51,4 @@
             badge: 5
             category: "heater"
           action_data: 
-            entity_id: climate.thermostaat
-- alias: Test
-  trigger:
-    platform: time
-    at: '13:20:30'
-  condition: 
-    condition: and
-    conditions:
-      - condition: time
-        weekday:
-          - sun
-          - sat
-      - condition: state
-        entity_id: 'device_tracker.denise_denise'
-        state: 'Home'
-  action:  
-    - service: notify.ios_iphone_van_denise
-      data:
-        title: Reisinformatie
-        message: >
-          Je verwachtte reistijd is {{ states.sensor.travel_time_denise_to_home.state }} minuten.
-          Zal ik de verwarming voor je aanzetten?
-        data:
-          push:
-            badge: 0
-            category: "heater"
-          action_data: 
-            entity_id: climate.thermostaat            
+            entity_id: climate.thermostaat           

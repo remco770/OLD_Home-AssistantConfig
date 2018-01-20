@@ -16,7 +16,7 @@
         entity_id: sensor.thermostaat_temperatuur
     condition:
      - condition: template
-       value_template: '{{ states.sensor.otgw_setpoint.state | int > 17 }}'
+       value_template: '{{ states.sensor.otgw_setpoint.state | int > 17.00 }}'
     action:
       - service: mqtt.publish
         data_template:
@@ -36,7 +36,7 @@
         entity_id: sensor.thermostaat_temperatuur
     condition:
      - condition: template
-       value_template: '{{ states.sensor.thermostaat_temperatuur.state | int == 17 }}'
+       value_template: '{{ states.sensor.thermostaat_temperatuur.state | int == 17.00 }}'
     action:
       - service: mqtt.publish
         data_template:
@@ -50,8 +50,12 @@
       - platform: state
         entity_id: sensor.thermostaat_temperatuur
     condition:
-     - condition: template
-       value_template: '{{ states.sensor.otgw_setpoint.state | int == 17 }}'
+      condition: and
+      conditions:
+       - condition: template
+         value_template: '{{ states.sensor.otgw_setpoint.state | int == 17.00 }}'
+       - condition: template
+         value_template: '{{ states.sensor.thermostaat_temperatuur.state | int > 17.00}}'
     action:
       - service: mqtt.publish
         data_template:

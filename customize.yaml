@@ -1,10 +1,5 @@
 ## Sensors
 
-    sensor.fibaro_system_fgk10x_door_opening_sensor_temperatuur_voordeur:
-      friendly_name: Temperatuur voordeur
-    binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:
-      friendly_name: Voordeur
-      device_class: opening
     sensor.hourly_gas_consumption:
       friendly_name: Huidig gasverbruik
     sensor.power_tariff:

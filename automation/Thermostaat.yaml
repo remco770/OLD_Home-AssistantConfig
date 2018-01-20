@@ -37,6 +37,30 @@
           temperature: 17
           operation_mode: Heat
 
+  - alias: 'Set Sunday morning heat target'
+    trigger:
+      - platform: time
+        at: '09:00:00'
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+            - sun
+        - condition: state
+          entity_id: 'device_tracker.denise_denise'
+          state: 'Home'         
+    action:
+      - service: climate.set_temperature
+        data:
+          entity_id: climate.thermostaat
+          temperature: 20.5
+          operation_mode: Heat         
+      - service: notify.ios_iphone_van_denise
+        data_template:
+          title: Goede morgen
+          message: !secret sundaymorning_message                
+          
   - alias: 'Set Thermostat Heat Target using push'
     trigger:
       - platform: event

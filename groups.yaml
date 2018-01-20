@@ -4,7 +4,6 @@
     entities:
       - group.huiskamer
       - group.slaapkamer
-      - group.beveiliging
       - group.mediaplayers
       - group.monitoring
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
@@ -42,11 +41,6 @@
       - group.group_synology_monitoring
       - group.group_domotica_monitoring
 
-  beveiliging:
-    name: Beveiliging
-    entities:
-      - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
-
   huiskamer:
     name: Huiskamer
     entities:
@@ -77,8 +71,6 @@
     name: Temperatuur informatie
     entities:
       - sensor.temperatuur_buiten    
-      - sensor.temperatuur_huiskamer
-      - sensor.fibaro_system_fgk10x_door_opening_sensor_temperatuur_voordeur
       - sensor.otgw_roomtemperature
   
   group_thermostaat:

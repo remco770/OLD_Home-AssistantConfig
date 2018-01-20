@@ -13,7 +13,7 @@
         entity_id: 'device_tracker.denise_denise'
         state: 'Work'
   action:  
-    - service: notify.ios_iphone
+    - service: notify.ios_iphone_van_denise
       data_template:
         title: Reisinformatie
         message: >
@@ -40,7 +40,7 @@
         entity_id: 'device_tracker.denise_denise'
         state: 'Work'
   action:  
-    - service: notify.ios_iphone
+    - service: notify.ios_iphone_van_denise
       data_template:
         title: Reisinformatie
         message: >
@@ -55,19 +55,19 @@
 - alias: Test
   trigger:
     platform: time
-    at: '18:05:00'
+    at: '13:20:30'
   condition: 
     condition: and
     conditions:
       - condition: time
         weekday:
-          - wed
-          - fri
+          - sun
+          - sat
       - condition: state
         entity_id: 'device_tracker.denise_denise'
-        state: 'Work'
+        state: 'Home'
   action:  
-    - service: notify.ios_iphone_van_remco
+    - service: notify.ios_iphone_van_denise
       data:
         title: Reisinformatie
         message: >

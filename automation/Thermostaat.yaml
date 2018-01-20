@@ -4,15 +4,19 @@
         event: start
     action:
       - delay: '00:01:00'
-      - service: climate.set_operation_mode
+      - service: climate.set_temperature
         data:
           entity_id: climate.thermostaat
-          operation_mode: Heat
+          temperature: '{{ states.sensor.thermostaat_temperatuur.state }}'
+          operation_mode: Heat     
 
-  - alias: 'Set Thermostat Heat Target'
+  - alias: 'Set Thermostat Heat Target when HA in control'
     trigger:
       - platform: state
         entity_id: sensor.thermostaat_temperatuur
+    condition:
+     - condition: template
+       value_template: '{{ states.sensor.otgw_setpoint.state | int > 17 }}'
     action:
       - service: mqtt.publish
         data_template:
@@ -26,6 +30,35 @@
           retain: true
           payload: '{{ states.climate.thermostaat.attributes.temperature }}'
 
+  - alias: 'Give control back to Thermostat'
+    trigger:
+      - platform: state
+        entity_id: sensor.thermostaat_temperatuur
+    condition:
+     - condition: template
+       value_template: '{{ states.sensor.thermostaat_temperatuur.state | int == 17 }}'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "actions/otmonitor/setpoint"
+          retain: true
+          payload: '0'
+      - delay: '00:12:00'
+
+  - alias: 'Set Thermostat Heat Target when Thermostat in control'
+    trigger:
+      - platform: state
+        entity_id: sensor.thermostaat_temperatuur
+    condition:
+     - condition: template
+       value_template: '{{ states.sensor.otgw_setpoint.state | int == 17 }}'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "actions/otmonitor/setpoint"
+          retain: true
+          payload: '{{ states.climate.thermostaat.attributes.temperature }}'      
+          
   - alias: 'Set daily heat target'
     trigger:
       - platform: time

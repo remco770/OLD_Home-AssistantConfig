@@ -55,6 +55,11 @@
       thermostaat_temperatuur:
         value_template: '{{ states.climate.thermostaat.attributes.temperature }}'
         unit_of_measurement: "°C"
+  -  platform: command_line
+     scan_interval: 
+      minutes: 120
+     name: Installed version
+     command: "head -5 /home/homeassistant/.homeassistant/.HA_VERSION"        
   - platform: google_travel_time
     api_key: !secret google_travel_time_api_key
     origin: device_tracker.denise_denise

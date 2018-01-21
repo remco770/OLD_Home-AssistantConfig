@@ -104,6 +104,7 @@
       - sensor.cpu_used
       - sensor.last_boot
       - sensor.log_db_file_size
+      - sensor.installed_version
       - sensor.ssl_certificate_expiry
       - sensor.ssl_certificate_expiry_2
   

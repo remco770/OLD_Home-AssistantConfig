@@ -44,11 +44,14 @@ tts:
 rflink:
   port: /dev/serial/by-id/usb-Arduino__www.arduino.cc__0042_55632313838351813140-if00
 
+mqtt:
+  broker: domotica.vanlent.net
+  port: 1883
+  username: ha
+  password: !secret mqtt_password
+  
 zwave:
   usb_path: /dev/ttyACM1
-
-mqtt:
-  broker: 127.0.0.1
 
 device_tracker:
   - platform: owntracks

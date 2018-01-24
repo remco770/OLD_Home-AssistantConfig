@@ -55,6 +55,14 @@
       thermostaat_temperatuur:
         value_template: '{{ states.climate.thermostaat.attributes.temperature }}'
         unit_of_measurement: "°C"
+      voordeur_sabotage:
+        friendly_name: Voordeur Sabotage
+        value_template: >-
+          {% if is_state('sensor.fibaro_system_fgk10x_door_opening_sensor_burglar', '0') %}
+            In orde
+          {% else %}
+            Sabotage
+          {% endif %}
   -  platform: command_line
      scan_interval: 
       minutes: 120

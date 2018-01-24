@@ -14,7 +14,7 @@
       friendly_name: Certificaat Stats
     sensor.log_db_file_size:
       friendly_name: Database HomeAssistant
-
+      
 ## Light
 
     light.nachtlampen:
@@ -49,3 +49,8 @@
 
     switch.alarm_inbraak:
       assumed_state: false
+      
+## Binary Sensors
+    binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:
+        device_class: door
+        friendly_name: Voordeur

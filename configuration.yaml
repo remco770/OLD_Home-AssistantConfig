@@ -7,11 +7,9 @@ homeassistant:
   time_zone: Europe/Amsterdam
   customize: !include customize.yaml
 
-# Enables the frontend
 frontend:
   javascript_version: es5
 
-# Enables configuration UI
 config:
 
 map:
@@ -21,23 +19,17 @@ http:
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
   base_url: !secret base_url
+  
 updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
 
-# Discover some devices automatically   
 discovery:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-# Enables support for tracking state changes over time
 history:
 
-# View all events in a logbook
 logbook:
 
-# Text to speech
 tts:
   - platform: google
 
@@ -60,8 +52,7 @@ influxdb:
   host: 127.0.0.1
   username: home-assistant
   password: !secret influxdb_password
-
-# Includes  
+ 
 automation: !include_dir_merge_list automation
 climate: !include climate.yaml
 group: !include groups.yaml

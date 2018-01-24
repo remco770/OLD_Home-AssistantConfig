@@ -71,7 +71,7 @@
       - service: climate.set_temperature
         data:
           entity_id: climate.thermostaat
-          temperature: 0
+          temperature: 17
           operation_mode: Heat
 
   - alias: 'Set Sunday morning heat target'

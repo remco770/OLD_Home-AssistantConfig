@@ -24,6 +24,8 @@
     name: Beveiliging
     entities:
       - group.group_beveiliging_control
+      - group.group_beveiliging_sensoren
+      - group.group_beveiliging_sabotage
       
   view_klimaat:
     view: yes
@@ -112,3 +114,13 @@
     name: Control Center
     entities:
       - switch.alarm_inbraak
+
+  group_beveiliging_sensoren:
+    name: Sensoren
+    entities:
+      - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
+      
+  group_beveiliging_sabotage:
+    name: Sabotage
+    entities:
+      - sensor.voordeur_sabotage

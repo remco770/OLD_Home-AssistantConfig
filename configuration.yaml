@@ -48,6 +48,12 @@ zwave:
 device_tracker:
   - platform: owntracks
 
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    key: !secret xiaomi_gateway_key
+
+  
 influxdb:
   host: 127.0.0.1
   username: home-assistant

@@ -54,3 +54,9 @@
     binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:
         device_class: door
         friendly_name: Voordeur
+    binary_sensor.door_window_sensor_158d0001de7482:
+        device_class: door
+        friendly_name: Balkondeur
+    binary_sensor.water_leak_sensor_158d0001bb6544:
+        device_class: moisture
+        friendly_name: Watersensor Wasmachine

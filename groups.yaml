@@ -119,8 +119,11 @@
     name: Sensoren
     entities:
       - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
+      - binary_sensor.door_window_sensor_158d0001de7482
+      - binary_sensor.water_leak_sensor_158d0001bb6544
       
   group_beveiliging_sabotage:
     name: Sabotage
     entities:
       - sensor.voordeur_sabotage
+      - sensor.balkondeur_sabotage

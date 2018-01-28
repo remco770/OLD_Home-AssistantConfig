@@ -61,8 +61,13 @@
         data_template:
           topic: "actions/otmonitor/setpoint"
           retain: true
-          payload: '{{ states.climate.thermostaat.attributes.temperature }}'      
-          
+          payload: '{{ states.climate.thermostaat.attributes.temperature }}'
+      - delay: '00:12:00'
+      - service: mqtt.publish
+        data_template:
+          topic: "actions/otmonitor/setpoint"
+          retain: true
+          payload: '{{ states.climate.thermostaat.attributes.temperature }}'              
   - alias: 'Set daily heat target'
     trigger:
       - platform: time

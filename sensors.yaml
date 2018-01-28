@@ -72,11 +72,19 @@
       balkondeur_sabotage:
         friendly_name: Balkondeur Sabotage
         value_template: >-
-          {% if states.binary_sensor.door_window_sensor_158d0001a1ecd5.attributes.battery_level < 15 %}
+          {% if states.binary_sensor.door_window_sensor_158d0001de7482.attributes.battery_level < 15 %}
             Sabotage Lage batterij
           {% else %}
             In bedrijf            
-          {% endif %}          
+          {% endif %}    
+      watersensor_wasmachine_sabotage:
+        friendly_name: Watersensor Wasmachine Sabotage
+        value_template: >-
+          {% if states.binary_sensor.water_leak_sensor_158d0001bb6544.attributes.battery_level < 15 %}
+            Sabotage Lage batterij
+          {% else %}
+            In bedrijf            
+          {% endif %}            
   -  platform: command_line
      scan_interval: 
       minutes: 120

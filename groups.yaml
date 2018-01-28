@@ -127,3 +127,4 @@
     entities:
       - sensor.voordeur_sabotage
       - sensor.balkondeur_sabotage
+      - sensor.watersensor_wasmachine_sabotage

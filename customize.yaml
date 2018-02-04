@@ -51,6 +51,10 @@
       assumed_state: false
       friendly_name: Doormelding Inbraak
       
+## Alarm
+    alarm_control_panel.alarm:
+      homebridge_visible: true
+      
 ## Binary Sensors
     binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:
         device_class: door

@@ -18,3 +18,20 @@
          message: 'Alarm is uitgeschakeld voor je!'
      - service: alarm_control_panel.alarm_disarm
        entity_id: alarm_control_panel.alarm
+
+  - alias: 'Auto arm alarm system when leaving the house'
+    trigger:
+     - platform: state
+       entity_id: group.all_devices
+       from: 'home'
+       to: 'not_home'
+    condition:
+     - condition: state
+       entity_id: alarm_control_panel.alarm
+       state: 'disarm'
+    action:
+     - service: notify.ios_iphone_van_remco
+       data:
+         message: 'Alarm is ingeschakeld voor je!'
+     - service: alarm_control_panel.alarm_arm_away
+       entity_id: alarm_control_panel.alarm       

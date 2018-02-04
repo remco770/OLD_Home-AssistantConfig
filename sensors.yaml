@@ -62,7 +62,7 @@
             Sabotage Ondergrond
           {% elif is_state('sensor.fibaro_system_fgk10x_door_opening_sensor_burglar', '254') %}
             Sabotage Pairing modus
-          {% elif states.zwave.fibaro_system_fgk10x_door_opening_sensor.attributes.battery_level < 15 %}
+          {% elif states.zwave.fibaro_system_fgk10x_door_opening_sensor.attributes.battery_level | int < 15 %}
             Sabotage Lage batterij
           {% elif is_state('sensor.fibaro_system_fgk10x_door_opening_sensor_burglar', '0') %}
             In bedrijf            

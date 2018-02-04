@@ -2,8 +2,12 @@
     trigger:
      - platform: zone
        event: enter
-       zone: home
+       zone: zone.home
        entity_id: device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
+     - platform: zone
+       event: enter
+       zone: zone.home
+       entity_id: device_tracker.denise_denise    
     condition:
      - condition: state
        entity_id: alarm_control_panel.alarm
@@ -11,6 +15,6 @@
     action:
      - service: notify.ios_iphone_van_remco
        data:
-         message: 'Alarm is uitgeschakeld voor je!
+         message: 'Alarm is uitgeschakeld voor je!'
      - service: alarm_control_panel.alarm_disarm
-        entity_id: alarm_control_panel.alarm
+       entity_id: alarm_control_panel.alarm

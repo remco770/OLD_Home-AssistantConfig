@@ -49,6 +49,7 @@
 
     switch.alarm_inbraak:
       assumed_state: false
+      friendly_name: Doormelding Inbraak
       
 ## Binary Sensors
     binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:

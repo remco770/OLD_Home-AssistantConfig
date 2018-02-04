@@ -114,6 +114,7 @@
     name: Control Center
     entities:
       - switch.alarm_inbraak
+      - alarm_control_panel.alarm
 
   group_beveiliging_sensoren:
     name: Sensoren

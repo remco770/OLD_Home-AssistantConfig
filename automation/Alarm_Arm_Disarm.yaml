@@ -1,0 +1,16 @@
+  - alias: 'Auto Disarm alarm system when coming home'
+    trigger:
+     - platform: zone
+       event: enter
+       zone: home
+       entity_id: device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
+    condition:
+     - condition: state
+       entity_id: alarm_control_panel.alarm
+       state: 'armed_away'
+    action:
+     - service: notify.ios_iphone_van_remco
+       data:
+         message: 'Alarm is uitgeschakeld voor je!
+     - service: alarm_control_panel.alarm_disarm
+        entity_id: alarm_control_panel.alarm

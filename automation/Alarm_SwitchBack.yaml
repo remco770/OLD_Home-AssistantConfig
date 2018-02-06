@@ -1,0 +1,10 @@
+  - alias: 'Switch back Inbraak Doormelding'
+    trigger:
+     - platform: state
+       entity_id: switch.alarm_inbraak
+       from: 'off'
+       to: 'on'  
+    action:
+     - delay: 00:01:00
+     - service: switch.turn_off
+       entity_id: switch.alarm_inbraak

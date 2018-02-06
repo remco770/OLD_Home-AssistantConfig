@@ -28,7 +28,7 @@
     condition:
      - condition: state
        entity_id: alarm_control_panel.alarm
-       state: 'disarm'
+       state: 'disarmed'
     action:
      - service: notify.ios_iphone_van_remco
        data:

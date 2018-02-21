@@ -13,3 +13,4 @@
       - sensor.temperatuur_buiten
       - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
       - alarm_control_panel.alarm
+      - sensor.neo_coolcam_power_plug_12a_power

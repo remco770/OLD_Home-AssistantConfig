@@ -9,6 +9,7 @@
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
       - configurator.plex_media_server
+      - sensor.neo_coolcam_power_plug_12a_power
 
   view_energie:
     view: yes
@@ -122,6 +123,10 @@
       - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
       - binary_sensor.door_window_sensor_158d0001de7482
       - binary_sensor.water_leak_sensor_158d0001bb6544
+      - binary_sensor.water_leak_sensor_158d0001c32dd5      
+      - binary_sensor.motion_sensor_158d0001e53bda
+      - binary_sensor.motion_sensor_158d0002234615
+
       
   group_beveiliging_sabotage:
     name: Sabotage
@@ -129,3 +134,6 @@
       - sensor.voordeur_sabotage
       - sensor.balkondeur_sabotage
       - sensor.watersensor_wasmachine_sabotage
+      - sensor.watersensor_vaatwasser_sabotage
+      - sensor.pir_keuken_sabotage
+      - sensor.pir_badkamer_sabotage

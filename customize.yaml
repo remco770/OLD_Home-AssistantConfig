@@ -65,3 +65,12 @@
     binary_sensor.water_leak_sensor_158d0001bb6544:
         device_class: moisture
         friendly_name: Watersensor Wasmachine
+    binary_sensor.motion_sensor_158d0001e53bda:
+        device_class: moving
+        friendly_name: PIR Badkamer
+    binary_sensor.water_leak_sensor_158d0001c32dd5:
+        device_class: moisture 
+        friendly_name: Watersensor Vaatwasser
+    binary_sensor.motion_sensor_158d0002234615:
+        device_class: moving
+        friendly_name: PIR Keuken

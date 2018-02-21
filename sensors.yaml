@@ -84,7 +84,31 @@
             Sabotage Lage batterij
           {% else %}
             In bedrijf            
-          {% endif %}            
+          {% endif %}
+      watersensor_vaatwasser_sabotage:
+        friendly_name: Watersensor Vaatwasser
+        value_template: >-
+          {% if states.binary_sensor.water_leak_sensor_158d0001c32dd5.attributes.battery_level < 15 %}
+            Sabotage Lage batterij
+          {% else %}
+            In bedrijf            
+          {% endif %}
+      pir_keuken_sabotage:
+        friendly_name: PIR Keuken
+        value_template: >-
+          {% if states.binary_sensor.motion_sensor_158d0002234615.attributes.battery_level < 15 %}
+            Sabotage Lage batterij
+          {% else %}
+            In bedrijf            
+          {% endif %}
+      pir_badkamer_sabotage:
+        friendly_name: PIR Badkamer
+        value_template: >-
+          {% if states.binary_sensor.motion_sensor_158d0001e53bda.attributes.battery_level < 15 %}
+            Sabotage Lage batterij
+          {% else %}
+            In bedrijf            
+          {% endif %}          
   -  platform: command_line
      scan_interval: 
       minutes: 120

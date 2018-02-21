@@ -1,0 +1,108 @@
+sensor.iphone_battery_level:
+  platform: ios
+  unique_id: level_iphonedenise
+sensor.iphone_van_remco_battery_state:
+  platform: ios
+  unique_id: state_iphone_van_remco
+sensor.iphone_battery_state:
+  platform: ios
+  unique_id: state_iphone_van_denise
+sensor.iphone_van_remco_battery_level:
+  platform: ios
+  unique_id: level_iphone_van_remco
+sensor.iphone_battery_level_2:
+  platform: ios
+  unique_id: level_iphone
+sensor.iphone_battery_state_2:
+  platform: ios
+  unique_id: state_iphone
+sensor.iphone_battery_level_3:
+  platform: ios
+  unique_id: level_iphone_van_denise
+sensor.iphone_battery_state_3:
+  platform: ios
+  unique_id: state_iphonedenise
+binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:
+  platform: zwave
+  unique_id: 4-72057594110017536
+sensor.fibaro_system_fgk10x_door_opening_sensor_temperature:
+  platform: zwave
+  unique_id: 4-72057594110033938
+sensor.fibaro_system_fgk10x_door_opening_sensor_alarm_type:
+  platform: zwave
+  unique_id: 4-72057594111082497
+sensor.fibaro_system_fgk10x_door_opening_sensor_alarm_level:
+  platform: zwave
+  unique_id: 4-72057594111082513
+sensor.fibaro_system_fgk10x_door_opening_sensor_sourcenodeid:
+  platform: zwave
+  unique_id: 4-72057594111082529
+sensor.fibaro_system_fgk10x_door_opening_sensor_heat:
+  platform: zwave
+  unique_id: 4-72057594111082609
+sensor.fibaro_system_fgk10x_door_opening_sensor_access_control:
+  platform: zwave
+  unique_id: 4-72057594111082641
+sensor.fibaro_system_fgk10x_door_opening_sensor_burglar:
+  platform: zwave
+  unique_id: 4-72057594111082657
+sensor.fibaro_system_fgk10x_door_opening_sensor_system:
+  platform: zwave
+  unique_id: 4-72057594111082689
+sensor.fibaro_system_fgk10x_door_opening_sensor_general:
+  platform: zwave
+  unique_id: 4-72057594111787009
+switch.neo_coolcam_power_plug_12a_switch:
+  platform: zwave
+  unique_id: 6-72057594143391744
+sensor.neo_coolcam_power_plug_12a_energy:
+  platform: zwave
+  unique_id: 6-72057594143604738
+sensor.neo_coolcam_power_plug_12a_previous_reading:
+  platform: zwave
+  unique_id: 6-72057594143604754
+sensor.neo_coolcam_power_plug_12a_interval:
+  platform: zwave
+  unique_id: 6-72057594143604771
+sensor.neo_coolcam_power_plug_12a_power:
+  platform: zwave
+  unique_id: 6-72057594143604866
+sensor.neo_coolcam_power_plug_12a_previous_reading_2:
+  platform: zwave
+  unique_id: 6-72057594143604882
+sensor.neo_coolcam_power_plug_12a_interval_2:
+  platform: zwave
+  unique_id: 6-72057594143604899
+sensor.neo_coolcam_power_plug_12a_voltage:
+  platform: zwave
+  unique_id: 6-72057594143604994
+sensor.neo_coolcam_power_plug_12a_previous_reading_3:
+  platform: zwave
+  unique_id: 6-72057594143605010
+sensor.neo_coolcam_power_plug_12a_interval_3:
+  platform: zwave
+  unique_id: 6-72057594143605027
+sensor.neo_coolcam_power_plug_12a_current:
+  platform: zwave
+  unique_id: 6-72057594143605058
+sensor.neo_coolcam_power_plug_12a_previous_reading_4:
+  platform: zwave
+  unique_id: 6-72057594143605074
+sensor.neo_coolcam_power_plug_12a_interval_4:
+  platform: zwave
+  unique_id: 6-72057594143605091
+sensor.neo_coolcam_power_plug_12a_exporting:
+  platform: zwave
+  unique_id: 6-72057594143605248
+sensor.neo_coolcam_power_plug_12a_alarm_type:
+  platform: zwave
+  unique_id: 6-72057594144636929
+sensor.neo_coolcam_power_plug_12a_alarm_level:
+  platform: zwave
+  unique_id: 6-72057594144636945
+sensor.neo_coolcam_power_plug_12a_sourcenodeid:
+  platform: zwave
+  unique_id: 6-72057594144636961
+sensor.neo_coolcam_power_plug_12a_power_management:
+  platform: zwave
+  unique_id: 6-72057594144637105

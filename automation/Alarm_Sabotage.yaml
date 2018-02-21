@@ -1,0 +1,19 @@
+  - alias: 'Sabotage'
+    trigger:
+     - platform: template
+       value_template: '{{ states.sensor.voordeur_sabotage.state != "In bedrijf" }}'
+     - platform: template
+       value_template: '{{ states.sensor.balkondeur_sabotage.state != "In bedrijf" }}'
+     - platform: template
+       value_template: '{{ states.sensor.watersensor_wasmachine_sabotage.state != "In bedrijf" }}'
+     - platform: template
+       value_template: '{{ states.sensor.sensor.watersensor_vaatwasser_sabotage.state != "In bedrijf" }}'
+     - platform: template
+       value_template: '{{ states.sensor.sensor.pir_keuken_sabotage.state != "In bedrijf" }}'       
+     - platform: template
+       value_template: '{{ states.sensor.sensor.pir_badkamer_sabotage.state != "In bedrijf" }}'   
+    action:
+     - service: notify.ios_iphone_van_remco
+       data_template:
+         message: >
+          Sabotage {{ trigger.to_state.attributes.friendly_name }} - {{ trigger.to_state.state }} !

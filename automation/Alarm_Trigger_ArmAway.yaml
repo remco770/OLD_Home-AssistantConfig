@@ -2,17 +2,21 @@
     trigger:
      - platform: state  
        entity_id: binary_sensor.door_window_sensor_158d0001de7482   # Achterdeur
+       to: 'on'
      - platform: state  
        entity_id: binary_sensor.motion_sensor_158d0001e53bda    # Badkamer
+       to: 'on'
      - platform: state  
        entity_id: binary_sensor.motion_sensor_158d0002234615    # Keuken      
+       to: 'on'
     condition:
      - condition: state
        entity_id: alarm_control_panel.alarm
        state: 'armed_away'
     action:
      - service: notify.ios_iphone_van_remco
-       data:
-         message: 'Alarm! test'
+       data_template:
+         message: >
+           Alarm! Getriggerd door Sensor {{ trigger.to_state.attributes.friendly_name }}
      - service: alarm_control_panel.alarm_trigger
        entity_id: alarm_control_panel.alarm       

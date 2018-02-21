@@ -1,12 +1,8 @@
   - alias: 'Alarm triggered'
     trigger:
      - platform: state  
-       entity_id: alarm_control_panel.alarm_alarm
+       entity_id: alarm_control_panel.alarm
        to: 'triggered'
-    condition:
-     - condition: state
-       entity_id: alarm_control_panel.alarm_alarm
-       state: 'armed_away'
     action:
      - service: notify.ios_iphone_van_remco
        data:

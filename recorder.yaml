@@ -14,3 +14,14 @@
       - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
       - alarm_control_panel.alarm
       - sensor.neo_coolcam_power_plug_12a_power
+      - sensor.voordeur_sabotage
+      - sensor.balkondeur_sabotage
+      - sensor.watersensor_wasmachine_sabotage
+      - sensor.watersensor_vaatwasser_sabotage
+      - sensor.pir_keuken_sabotage
+      - sensor.pir_badkamer_sabotage
+      - binary_sensor.door_window_sensor_158d0001de7482
+      - binary_sensor.water_leak_sensor_158d0001bb6544
+      - binary_sensor.water_leak_sensor_158d0001c32dd5      
+      - binary_sensor.motion_sensor_158d0001e53bda
+      - binary_sensor.motion_sensor_158d0002234615

@@ -34,4 +34,52 @@
        data:
          message: 'Alarm is ingeschakeld voor je!'
      - service: alarm_control_panel.alarm_arm_away
-       entity_id: alarm_control_panel.alarm       
+       entity_id: alarm_control_panel.alarm
+
+  - alias: 'Auto arm alarm system when going to bed'
+    trigger:
+     - platform: numeric_state
+       entity_id: sensor.neo_coolcam_power_plug_12a_power
+       above: 3.0
+       for:
+         hours: 0
+         minutes: 3
+         seconds: 0
+    condition:
+       condition: and
+       conditions:
+         - condition: state
+           entity_id: alarm_control_panel.alarm
+           state: 'disarmed'
+         - condition: time
+           after: '22:00:00'
+           before: '04:00:00'
+           
+    action:
+     - service: notify.ios_iphone_van_remco
+       data:
+         message: 'Alarm (home) is ingeschakeld voor je!'
+     - service: alarm_control_panel.alarm_arm_home
+       entity_id: alarm_control_panel.alarm
+       
+  - alias: 'Auto disarm alarm system when waking up'
+    trigger:
+     - platform: state
+       entity_id: binary_sensor.motion_sensor_158d0001e53bda
+       from: 'off'
+       to: 'on'
+    condition:
+       condition: and
+       conditions:
+         - condition: state
+           entity_id: alarm_control_panel.alarm
+           state: 'armed_home'
+         - condition: time
+           after: '05:00:00'
+           before: '12:00:00'
+    action:
+     - service: notify.ios_iphone_van_remco
+       data:
+         message: 'Alarm (home) is uitgeschakeld voor je!'
+     - service: alarm_control_panel.alarm_disarm
+       entity_id: alarm_control_panel.alarm                     

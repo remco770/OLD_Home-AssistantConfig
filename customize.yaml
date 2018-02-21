@@ -18,7 +18,10 @@
       friendly_name: Temperatuur huiskamer
     sensor.temperature_158d00022c9cb0:
       friendly_name: Temperatuur buiten
-      
+    sensor.humidity_158d00022c9c6b:
+      friendly_name: Luchtvochtigheid huiskamer
+    sensor.humidity_158d00022c9cb0:
+      friendly_name: Luchtvochtigheid buiten
 ## Light
 
     light.nachtlampen:

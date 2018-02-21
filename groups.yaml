@@ -8,8 +8,6 @@
       - group.monitoring
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
-      - configurator.plex_media_server
-      - sensor.neo_coolcam_power_plug_12a_power
 
   view_energie:
     view: yes
@@ -74,7 +72,9 @@
     name: Temperatuur informatie
     entities:
       - sensor.temperature_158d00022c9cb0
+      - sensor.humidity_158d00022c9cb0
       - sensor.temperature_158d00022c9c6b
+      - sensor.humidity_158d00022c9c6b
       - sensor.otgw_roomtemperature
   
   group_thermostaat:

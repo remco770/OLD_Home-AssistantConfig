@@ -5,7 +5,7 @@
     sensor.power_tariff:
       friendly_name: Huidige stroomverbruik zone
     sensor.otgw_roomtemperature:
-      friendly_name: Temperatuur huiskamer
+      friendly_name: Temperatuur thermostaat
     sensor.otgw_setpoint:
       friendly_name: Gewenste temperatuur huiskamer
     sensor.ssl_certificate_expiry:
@@ -14,6 +14,10 @@
       friendly_name: Certificaat Stats
     sensor.log_db_file_size:
       friendly_name: Database HomeAssistant
+    sensor.temperature_158d00022c9c6b:
+      friendly_name: Temperatuur huiskamer
+    sensor.temperature_158d00022c9cb0:
+      friendly_name: Temperatuur buiten
       
 ## Light
 
@@ -66,11 +70,11 @@
         device_class: moisture
         friendly_name: Watersensor Wasmachine
     binary_sensor.motion_sensor_158d0001e53bda:
-        device_class: moving
+        device_class: motion
         friendly_name: PIR Badkamer
     binary_sensor.water_leak_sensor_158d0001c32dd5:
         device_class: moisture 
         friendly_name: Watersensor Vaatwasser
     binary_sensor.motion_sensor_158d0002234615:
-        device_class: moving
+        device_class: motion
         friendly_name: PIR Keuken

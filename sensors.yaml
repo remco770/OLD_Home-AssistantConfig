@@ -1,6 +1,4 @@
   - platform: yr
-  - platform: dsmr
-    device: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AI1AM4ZC-if00-port0
   - platform: synologydsm
     host: 10.10.0.2
     username: !secret synology_username
@@ -18,6 +16,11 @@
     state_topic: "events/central_heating/otmonitor/setpoint"
     name: "OTGW setpoint"
     unit_of_measurement: "°C"
+  - platform: mqtt
+    state_topic: "dsmr/reading/electricity_currently_delivered"
+    name: "Huidige stroomverbruik"
+    unit_of_measurement: "Watt"
+    value_template: "{{  value | float *1000 | round(0) }}"    
   - platform: systemmonitor
     resources:
       - type: disk_free
@@ -36,10 +39,6 @@
     unit_of_measurement: 'MB'
   - platform: template
     sensors: 
-      energie_stroom_verbruik:
-        friendly_name: Huidig stroomverbruik
-        value_template: '{{ states.sensor.power_consumption.state | float * 1000 }}'
-        unit_of_measurement: 'Watt'
       thermostaat_temperatuur:
         value_template: '{{ states.climate.thermostaat.attributes.temperature }}'
         unit_of_measurement: "°C"

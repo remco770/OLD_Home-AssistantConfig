@@ -4,18 +4,11 @@
     entities:
       - group.huiskamer
       - group.slaapkamer
+      - group.verbruik      
       - group.mediaplayers
-      - group.monitoring
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
 
-  view_energie:
-    view: yes
-    icon: mdi:power-plug
-    name: Energie
-    entities:
-      - group.verbruik
-      - group.group_energiemeter
 
   view_beveiliging:
     view: yes
@@ -57,16 +50,7 @@
   verbruik:
     name: Verbruik
     entities:
-      - sensor.hourly_gas_consumption
-      - sensor.energie_stroom_verbruik
-
-  group_energiemeter:
-    name: Energiemeter
-    entities:
-      - sensor.power_consumption_low
-      - sensor.power_consumption_normal
-      - sensor.gas_consumption
-      - sensor.power_tariff    
+      - sensor.huidige_stroomverbruik
       
   temperaturen:
     name: Temperatuur informatie

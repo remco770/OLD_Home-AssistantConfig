@@ -8,7 +8,6 @@ homeassistant:
   customize: !include customize.yaml
 
 frontend:
-  javascript_version: es5
 
 config:
 

@@ -106,3 +106,51 @@ sensor.neo_coolcam_power_plug_12a_sourcenodeid:
 sensor.neo_coolcam_power_plug_12a_power_management:
   platform: zwave
   unique_id: 6-72057594144637105
+binary_sensor.door_window_sensor_158d0001de7482:
+  platform: xiaomi_aqara
+  unique_id: status158d0001de7482
+binary_sensor.water_leak_sensor_158d0001bb6544:
+  platform: xiaomi_aqara
+  unique_id: status158d0001bb6544
+binary_sensor.motion_sensor_158d0001e53bda:
+  platform: xiaomi_aqara
+  unique_id: status158d0001e53bda
+binary_sensor.motion_sensor_158d0002234615:
+  platform: xiaomi_aqara
+  unique_id: status158d0002234615
+binary_sensor.water_leak_sensor_158d0001c32dd5:
+  platform: xiaomi_aqara
+  unique_id: status158d0001c32dd5
+sensor.temperature_158d00022c9cb0:
+  platform: xiaomi_aqara
+  unique_id: temperature158d00022c9cb0
+sensor.humidity_158d00022c9cb0:
+  platform: xiaomi_aqara
+  unique_id: humidity158d00022c9cb0
+sensor.pressure_158d00022c9cb0:
+  platform: xiaomi_aqara
+  unique_id: pressure158d00022c9cb0
+sensor.illumination_158d0001e53bda:
+  platform: xiaomi_aqara
+  unique_id: lux158d0001e53bda
+sensor.temperature_158d00022c9c6b:
+  platform: xiaomi_aqara
+  unique_id: temperature158d00022c9c6b
+sensor.humidity_158d00022c9c6b:
+  platform: xiaomi_aqara
+  unique_id: humidity158d00022c9c6b
+sensor.pressure_158d00022c9c6b:
+  platform: xiaomi_aqara
+  unique_id: pressure158d00022c9c6b
+sensor.illumination_158d0002234615:
+  platform: xiaomi_aqara
+  unique_id: lux158d0002234615
+sensor.illumination_7811dcb3abbf:
+  platform: xiaomi_aqara
+  unique_id: illumination7811dcb3abbf
+media_player.slaapkamer:
+  platform: cast
+  unique_id: 1ce4d38d-5473-cda6-44a1-c12cee70a2e9
+light.gateway_light_7811dcb3abbf:
+  platform: xiaomi_aqara
+  unique_id: rgb7811dcb3abbf

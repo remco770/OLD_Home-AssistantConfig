@@ -27,6 +27,7 @@
     light.nachtlampen:
       homebridge_visible: true
       supported_features: 63
+      assumed_state: false
     light.huiskamer_lamp:
       assumed_state: false
       homebridge_visible: true
@@ -36,6 +37,7 @@
     light.dressoir_lamp:
       homebridge_visible: true
       supported_features: 63
+      assumed_state: false
 
 ## Media players
 

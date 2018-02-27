@@ -100,7 +100,13 @@
      scan_interval: 
       minutes: 120
      name: Installed version
-     command: "head -5 /home/homeassistant/.homeassistant/.HA_VERSION"        
+     command: "head -5 /home/homeassistant/.homeassistant/.HA_VERSION"
+  - platform: command_line
+    name: gas_afname_dagelijks
+    command: "python3 /home/pi/.homeassistant/python_scripts/dsmr_gas_today.py"
+    unit_of_measurement: "m3"
+    value_template: '{{ value | round(2) }}'
+    scan_interval: 3600     
   - platform: google_travel_time
     api_key: !secret google_travel_time_api_key
     origin: device_tracker.denise_denise

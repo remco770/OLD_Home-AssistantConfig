@@ -51,6 +51,7 @@
     name: Verbruik
     entities:
       - sensor.huidige_stroomverbruik
+      - sensor.gas_afname_dagelijks
       
   temperaturen:
     name: Temperatuur informatie

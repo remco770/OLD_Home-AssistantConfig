@@ -10,6 +10,14 @@
       friendly_name: Certificaat Stats
     sensor.log_db_file_size:
       friendly_name: Database HomeAssistant
+    sensor.temperature_158d00022c9c6b:
+      friendly_name: Temperatuur huiskamer
+    sensor.temperature_158d00022c9cb0:
+      friendly_name: Temperatuur buiten
+    sensor.humidity_158d00022c9c6b:
+      friendly_name: Luchtvochtigheid huiskamer
+    sensor.humidity_158d00022c9cb0:
+      friendly_name: Luchtvochtigheid buiten
     sensor.gas_afname_dagelijks:
       friendly_name: Gas verbruik vandaag
 ## Light

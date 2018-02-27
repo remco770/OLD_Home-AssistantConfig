@@ -1,15 +1,3 @@
-  - alias: 'Set Thermostat at boot'
-    trigger:
-      - platform: homeassistant
-        event: start
-    action:
-      - delay: '00:01:00'
-      - service: climate.set_temperature
-        data:
-          entity_id: climate.thermostaat
-          temperature: '17'
-          operation_mode: Heat     
-
   - alias: 'Set Thermostat Heat Target when HA in control'
     trigger:
       - platform: state

@@ -6,14 +6,12 @@
     entities:
       - sensor.otgw_setpoint
       - sensor.otgw_roomtemperature
-      - sensor.hourly_gas_consumption
-      - sensor.energie_stroom_verbruik
+      - sensor.huidige_stroomverbruik
       - climate.thermostaat
       - sensor.thermostaat_temperatuur
       - sensor.temperatuur_buiten
       - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
       - alarm_control_panel.alarm
-      - sensor.neo_coolcam_power_plug_12a_power
       - sensor.voordeur_sabotage
       - sensor.balkondeur_sabotage
       - sensor.watersensor_wasmachine_sabotage

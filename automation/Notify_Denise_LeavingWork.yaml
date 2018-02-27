@@ -1,7 +1,7 @@
 - alias: Notify Denise Leaving Work Di-Do
   trigger:
     platform: time
-    at: '16:45:00'
+    at: '16:00:00'
   condition: 
     condition: and
     conditions:
@@ -28,7 +28,7 @@
 - alias: Notify Denise Leaving Work Wo-Vr
   trigger:
     platform: time
-    at: '18:00:00'
+    at: '17:00:00'
   condition: 
     condition: and
     conditions:

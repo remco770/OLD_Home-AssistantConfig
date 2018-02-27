@@ -1,7 +1,7 @@
  push: 
   categories: 
   - name: Heater
-    identifier: heater
+    identifier: 'heater'
     actions: 
     - identifier: HEATERON
       title: "Zet de verwarming aan" 

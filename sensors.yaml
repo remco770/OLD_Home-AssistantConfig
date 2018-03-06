@@ -39,6 +39,9 @@
     unit_of_measurement: 'MB'
   - platform: template
     sensors: 
+      elec_dag_verbruik:
+        value_template: '{{ float(states.sensor.elec1_afname_dagelijks.state) + float(states.sensor.elec2_afname_dagelijks.state) }}'
+        unit_of_measurement: "kwH"    
       thermostaat_temperatuur:
         value_template: '{{ states.climate.thermostaat.attributes.temperature }}'
         unit_of_measurement: "°C"
@@ -103,10 +106,22 @@
      command: "head -5 /home/homeassistant/.homeassistant/.HA_VERSION"
   - platform: command_line
     name: gas_afname_dagelijks
-    command: "python3 /home/pi/.homeassistant/python_scripts/dsmr_gas_today.py"
+    command: "python3 /home/homeassistant/.homeassistant/python_scripts/dsmr_gas_today.py"
     unit_of_measurement: "m3"
     value_template: '{{ value | round(2) }}'
-    scan_interval: 3600     
+    scan_interval: 3600
+  - platform: command_line
+    name: elec1_afname_dagelijks
+    command: "python3 /home/homeassistant/.homeassistant/python_scripts/dsmr_elec1_today.py"
+    unit_of_measurement: "kwH"
+    value_template: '{{ value | round(2) }}'
+    scan_interval: 3600    
+  - platform: command_line
+    name: elec2_afname_dagelijks
+    command: "python3 /home/homeassistant/.homeassistant/python_scripts/dsmr_elec2_today.py"
+    unit_of_measurement: "kwH"
+    value_template: '{{ value | round(2) }}'
+    scan_interval: 3600   
   - platform: google_travel_time
     api_key: !secret google_travel_time_api_key
     origin: device_tracker.denise_denise

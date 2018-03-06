@@ -23,3 +23,5 @@
       - binary_sensor.water_leak_sensor_158d0001c32dd5      
       - binary_sensor.motion_sensor_158d0001e53bda
       - binary_sensor.motion_sensor_158d0002234615
+      - sensor.gas_afname_dagelijks
+      - sensor.stroom_afname_dagelijks

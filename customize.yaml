@@ -20,8 +20,8 @@
       friendly_name: Luchtvochtigheid buiten
     sensor.gas_afname_dagelijks:
       friendly_name: Gas verbruik vandaag
-    sensor.elec_dag_verbruik:
-      friendly_name: Energie verbruik vandaag      
+    sensor.stroom_afname_dagelijks:
+      friendly_name: Stroom verbruik vandaag      
 ## Light
 
     light.nachtlampen:

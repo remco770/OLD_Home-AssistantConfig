@@ -39,7 +39,7 @@
     unit_of_measurement: 'MB'
   - platform: template
     sensors: 
-      elec_dag_verbruik:
+      stroom_afname_dagelijks:
         value_template: '{{ float(states.sensor.elec1_afname_dagelijks.state) + float(states.sensor.elec2_afname_dagelijks.state) }}'
         unit_of_measurement: "kwH"    
       thermostaat_temperatuur:

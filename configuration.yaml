@@ -46,6 +46,10 @@ zwave:
 
 device_tracker:
   - platform: owntracks
+  - platform: ping
+    hosts:
+      icmp_remco: 10.10.0.52  
+      icmp_denise: 10.10.0.68
 
 xiaomi_aqara:
   discovery_retry: 5

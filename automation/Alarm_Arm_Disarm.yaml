@@ -7,7 +7,15 @@
      - platform: zone
        event: enter
        zone: zone.home
-       entity_id: device_tracker.denise_denise    
+       entity_id: device_tracker.denise_denise
+     - platform: zone
+       event: enter
+       zone: zone.home
+       entity_id: device_tracker.icmp_denise 
+     - platform: zone
+       event: enter
+       zone: zone.home
+       entity_id: device_tracker.icmp_remco        
     condition:
      - condition: state
        entity_id: alarm_control_panel.alarm

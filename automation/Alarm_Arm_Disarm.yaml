@@ -1,21 +1,25 @@
   - alias: 'Auto Disarm alarm system when coming home'
     trigger:
-     - platform: zone
-       event: enter
-       zone: zone.home
+     - platform: state
        entity_id: device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
-     - platform: zone
-       event: enter
-       zone: zone.home
+       from: 'not_home'
+       to: 'home'
+     - platform: state
        entity_id: device_tracker.denise_denise
-     - platform: zone
-       event: enter
-       zone: zone.home
+       from: 'not_home'
+       to: 'home'       
+     - platform: state
        entity_id: device_tracker.icmp_denise 
-     - platform: zone
-       event: enter
-       zone: zone.home
-       entity_id: device_tracker.icmp_remco        
+       from: 'not_home'
+       to: 'home'       
+     - platform: state
+       entity_id: device_tracker.icmp_remco  
+       from: 'not_home'
+       to: 'home'
+     - platform: state
+       entity_id: device_tracker.iphone_van_remco
+       from: 'not_home'
+       to: 'home'
     condition:
      - condition: state
        entity_id: alarm_control_panel.alarm

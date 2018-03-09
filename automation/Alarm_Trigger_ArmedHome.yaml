@@ -1,0 +1,16 @@
+  - alias: 'Alarm when Alarm is armed with home mode'
+    trigger:
+     - platform: state  
+       entity_id: binary_sensor.door_window_sensor_158d0001de7482   # Achterdeur
+       to: 'on'
+    condition:
+     - condition: state
+       entity_id: alarm_control_panel.alarm
+       state: 'armed_home'
+    action:
+     - service: notify.ios_iphone_van_remco
+       data_template:
+         message: >
+           Alarm! Getriggerd door Sensor {{ trigger.to_state.attributes.friendly_name }}
+     - service: alarm_control_panel.alarm_trigger
+       entity_id: alarm_control_panel.alarm       

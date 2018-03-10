@@ -55,6 +55,9 @@ xiaomi_aqara:
   discovery_retry: 5
   gateways:
     key: !secret xiaomi_gateway_key
+    
+homekit:
+  pincode: '546-47-638'
 
 alarm_control_panel: !include alarm.yaml  
 automation: !include_dir_merge_list automation

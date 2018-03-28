@@ -3,21 +3,11 @@
     icon: mdi:home
     entities:
       - group.huiskamer
-      - group.slaapkamer
-      - group.verbruik      
+      - group.slaapkamer  
       - group.mediaplayers
       - device_tracker.remco_c3cebce74a044c8bb6ca163defb3e80c
       - device_tracker.denise_denise
 
-
-  view_beveiliging:
-    view: yes
-    icon: mdi:alarm-light
-    name: Beveiliging
-    entities:
-      - group.group_beveiliging_control
-      - group.group_beveiliging_sensoren
-      - group.group_beveiliging_sabotage
       
   view_klimaat:
     view: yes

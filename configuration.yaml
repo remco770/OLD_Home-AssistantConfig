@@ -41,23 +41,12 @@ mqtt:
   username: ha
   password: !secret mqtt_password
   
-zwave:
-  usb_path: /dev/ttyACM1
-
 device_tracker:
   - platform: owntracks
   - platform: ping
     hosts:
       icmp_remco: 10.10.0.52  
       icmp_denise: 10.10.0.68
-
-xiaomi_aqara:
-  discovery_retry: 5
-  gateways:
-    key: !secret xiaomi_gateway_key
-    
-homekit:
-  pincode: '546-47-638'
 
 alarm_control_panel: !include alarm.yaml  
 automation: !include_dir_merge_list automation

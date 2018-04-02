@@ -32,6 +32,16 @@ logbook:
 tts:
   - platform: google
 
+homekit:
+  auto_start: False
+  filter:
+    include_entities:
+      - climate.thermostaat
+      - light.huiskamer_lamp
+      - light.dressoir_lamp
+      - light.nachtlampen
+      - light.slaapkamer_lamp
+  
 rflink:
   port: /dev/serial/by-id/usb-Arduino__www.arduino.cc__0042_55632313838351813140-if00
 

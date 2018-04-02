@@ -25,14 +25,8 @@
 ## Light
 
     light.nachtlampen:
-      homebridge_visible: true
       supported_features: 63
-    light.huiskamer_lamp:
-      homebridge_visible: true
-    light.slaapkamer_lamp:
-      homebridge_visible: true
     light.dressoir_lamp:
-      homebridge_visible: true
       supported_features: 63
 
 ## Media players
@@ -47,7 +41,6 @@
 ## Climate
 
     climate.thermostaat:
-      homebridge_visible: true
       target_temp_step: 0.5
 
 ## Switches

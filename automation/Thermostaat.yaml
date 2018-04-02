@@ -114,3 +114,13 @@
           entity_id: climate.thermostaat
           temperature: 20.5
           operation_mode: Heat
+  - alias: 'Set Thermostat mode at boot'
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - delay: 00:05
+      - service: climate.set_operation_mode
+        data:
+         entity_id: climate.thermostaat
+         operation_mode: Heat          
